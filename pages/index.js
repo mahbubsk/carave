@@ -33,12 +33,19 @@ export default function Home() {
                     <hr />
                     <Spacer y={3} />
                     <AboutUs />
+                    <Spacer y={3} />
                     <Pricing />
+                    <Spacer y={3} />
                     <Review />
+                    <Spacer y={3} />
                     <Success />
+                    <Spacer y={3} />
                     <Contact />
+                    <Spacer y={3} />
                     <CompanyLogos />
+                    <Spacer y={3} />
                     <Contact />
+                    <Spacer y={3} />
                     <Footer />
                 </Container>
 
