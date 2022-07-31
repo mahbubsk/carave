@@ -1,0 +1,25 @@
+.hero {
+  text-align: center;
+}
+.heroText {
+  font-size: 6em;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  color: #424242;
+}
+.heroSpanText {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-image: linear-gradient(135deg, #fdd819 10%, #e80505 100%);
+  position: relative;
+  z-index: 1;
+  font-family: walter;
+}
+.heroBtnWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,36 @@
+.nav {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.logo {
+  font-size: 1.5rem;
+  font-family: walter;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-image: linear-gradient(135deg, #fdd819 10%, #e80505 100%);
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0rem;
+  height: 4rem;
+}
+.navItem {
+  list-style-type: none;
+  margin: 1rem;
+  padding-top: 1rem;
+  cursor: pointer;
+  color: #424242;
+}
+
+.navItemContact {
+  font-size: 1.3rem;
+}
+.navItemLinkdin {
+  font-size: 1.3rem;
+}
