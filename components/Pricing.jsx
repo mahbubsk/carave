@@ -1,5 +1,8 @@
 import {useState} from "react";
-import {Text, Spacer, Switch} from "@nextui-org/react";
+import {Text, Spacer, Switch, Grid, Card, Row, Button} from "@nextui-org/react";
+import PricingCard from "./PricingCard";
+import {BsCheckCircleFill} from "react-icons/bs";
+
 const Pricing = () => {
 
     const [isChecked, setIsChecked] = useState(false);
@@ -16,9 +19,9 @@ const Pricing = () => {
                 size={60}
                 css={{
                     textGradient: "135deg, #fdd819 10%, #e80505 100%",
-                    fontFamily: "walter"
+                    fontFamily: "walter",
+                    textAlign:"center"
                 }}
-                style={{textAlign:"center"}}
                 >
                 Pricing
             </Text>
@@ -40,21 +43,69 @@ const Pricing = () => {
                         
                     }}>
 
+            {
+                isChecked ?
                 <Text
-                    css={{margin:"1rem"}}
+                    css={{
+                        margin:"1rem",
+                        
+                    }}
                 >
                     Monthly
                 </Text>
-                <Switch
-                    size="xl"
-                    onChange={handleChange}  
-                />
+            :
                 <Text
-                    css={{margin:"1rem"}}
+                    css={{
+                        margin:"1rem",
+                        textGradient: "135deg, #fdd819 10%, #e80505 100%",
+                        fontWeight:"bold",
+                        transition:"all 0.4s"
+                }}
+                >
+                    Monthly
+                </Text>
+            }
+            <Switch
+                size="xl"
+                onChange={handleChange}  
+            />
+            {
+                isChecked ?
+                <Text
+                css={{
+                    margin:"1rem",
+                    textGradient: "135deg, #fdd819 10%, #e80505 100%",
+                    fontWeight:"bold",
+                    transition:"all 0.4s"
+            }}
+                    
                 >
                     Yearly
                 </Text>
+            :
+                <Text
+                    css={{
+                        margin:"1rem",
+                        
+                    }}
+                >
+                    Yearly
+                </Text>
+            }
             </div>
+
+            <Spacer/>
+            <Grid.Container gap={4} justify="center">
+                <Grid xs={12} sm={6} md={4}>
+                    <PricingCard cardTitle="Basic"/>
+                </Grid>
+                <Grid xs={12} sm={6} md={4}>
+                    <PricingCard cardTitle="Standard" isStandard={true}/>
+                </Grid>
+                <Grid xs={12} sm={6} md={4}>
+                    <PricingCard cardTitle="Premium"/>   
+                </Grid>
+            </Grid.Container>
         </div>
     );
 };
