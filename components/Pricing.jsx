@@ -97,13 +97,13 @@ const Pricing = () => {
             <Spacer/>
             <Grid.Container gap={4} justify="center">
                 <Grid xs={12} sm={6} md={4}>
-                    <PricingCard cardTitle="Basic"/>
+                    <PricingCard cardTitle="Basic" monthlyPrice="$70"/>
                 </Grid>
                 <Grid xs={12} sm={6} md={4}>
-                    <PricingCard cardTitle="Standard" isStandard={true}/>
+                    <PricingCard cardTitle="Standard" isStandard={true} monthlyPrice="$100"/>
                 </Grid>
                 <Grid xs={12} sm={6} md={4}>
-                    <PricingCard cardTitle="Premium"/>   
+                    <PricingCard cardTitle="Premium" monthlyPrice="$140"/>   
                 </Grid>
             </Grid.Container>
         </div>
