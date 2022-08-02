@@ -29,7 +29,25 @@ const Success = () => {
                     
                 </Grid>
                 <Grid xs={12} sm={6} md={6}>
-                   
+                    {/* <Row>
+                        <Col>
+                            <Card isHoverable variant="bordered" css={{ mw: "80%", margin:"1rem" }}>
+                                <Card.Body>
+                                    <Text h2>Project Done</Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                        <Col>
+                            <Card isHoverable variant="bordered" css={{ mw: "80%" }}>
+                                <Card.Body>
+                                    <Text h1>Review</Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    </Row> */}
+                    <Text h1 color="red">
+                        Image will be attached
+                    </Text>
                 </Grid>
             </Grid.Container>
         </div>
