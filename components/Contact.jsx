@@ -33,6 +33,7 @@ const Contact = () => {
                     
                 >
                     <Spacer y={3}/>
+                    <Spacer/>
                     <Row
                         css={{
                             display:"flex",

@@ -47,8 +47,8 @@ export default function Home() {
                     <Spacer y={3} />
                     <CompanyLogos />
                     <Spacer y={3} />
-                    <Footer />
                 </Container>
+                <Footer />
 
             </main>
         </div>
