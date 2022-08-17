@@ -1,13 +1,14 @@
 .hero {
   text-align: center;
+  margin-top: 3rem;
 }
-.heroText {
+/* .heroText {
   font-size: 6em;
   text-align: center;
   width: 60%;
   margin: auto;
   color: #424242;
-}
+} */
 .heroSpanText {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
