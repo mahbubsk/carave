@@ -1,22 +1,37 @@
 import styles from '../styles/hero.module.css';
-import {Text, Button, Grid } from "@nextui-org/react";
+import {Text, Button, Grid, Row } from "@nextui-org/react";
 
 const Hero = () => {
     return (
         <div className={styles.hero}>
-            <h1 className={styles.heroText}>
+            <Text
+                textAlign="center"
+                margin="auto"
+                weight="bold"
+                size={100}
+                css={{
+                    width:"60%",
+                    color:"#424242"
+                }}
+            >
                 Your Solution 
                     <span className={styles.heroSpanText}>
                         Carave
                     </span>
                 Is Here
-            </h1>
-            <div className={styles.heroBtnWrap}>
+            </Text>
+            <Text 
+                css={{
+                    d:"flex",
+                    ai:"center",
+                    jc:"center"
+                }}
+            >
                 <Button 
                     shadow color="warning" >
                     Know More 
                 </Button>
-            </div>
+            </Text>
         </div>
     );
 };
