@@ -13,6 +13,7 @@ import Footer from "../components/Footer";
 
 import { Container, Card, Row, Text, Spacer, Button } from "@nextui-org/react";
 
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 
 export default function Home() {
@@ -48,6 +49,11 @@ export default function Home() {
                     <CompanyLogos />
                     <Spacer y={3} />
                 </Container>
+                <MessengerCustomerChat
+                    pageId="315825732576242"
+                    appId="906769103521842"
+                />
+
                 <Footer />
 
             </main>
