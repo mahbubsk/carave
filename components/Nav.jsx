@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import styles from '../styles/nav.module.css';
-import {Container, Tooltip} from '@nextui-org/react';
+import {Container, Row, Switch, Tooltip} from '@nextui-org/react';
 import Link from "next/link"
 import { BsGithub, BsFacebook } from 'react-icons/bs';
 import { IoMdContact } from 'react-icons/io';
@@ -46,35 +46,38 @@ const Nav = () => {
                         </Tooltip>
                     </li>
                     <li className={[styles.navItem, styles.navItemContact].join(" ")}>
-                    <Tooltip
-                        color="primary"
-                        content="Contact"
-                        placement="bottom"
-                    >
-                        <IoMdContact/>
-                    </Tooltip>
+                        <Tooltip
+                            color="primary"
+                            content="Contact"
+                            placement="bottom"
+                        >
+                            <IoMdContact/>
+                        </Tooltip>
                     </li>
                     <li className={[styles.navItem, styles.navItemLinkdin].join(" ")}>
-                    <Tooltip
-                        color="primary"
-                        content="Linkdin"
-                        placement="bottom"
-                    >
-                        
-                            <AiFillLinkedin/>
-                    </Tooltip>
+                        <Tooltip
+                            color="primary"
+                            content="Linkdin"
+                            placement="bottom"
+                        >
+                            
+                                <AiFillLinkedin/>
+                        </Tooltip>
                     </li>
-                    <li onClick={handleDarkMood}
-                    className={[styles.navItem, styles.navItemLinkdin].join(" ")}>
-                    <Tooltip
-                        color="primary"
-                        content={isDark ? "Normal" : "Dark"}
-                        placement="bottom"
-                    >
-                            {
-                                isDark ? <FaMoon/> : <BsFillSunFill/>
-                            }
-                    </Tooltip>
+                    <li
+                        className={[styles.navItem, styles.navItemLinkdin].join(" ")}>
+                        <Tooltip
+                            color="primary"
+                            content={isDark ? "Dark" : "Normal"}
+                            placement="bottom"
+                        >
+                            <Switch
+                                iconOn={<FaMoon/>}
+                                iconOff={<BsFillSunFill/>}
+                                onChange={handleDarkMood}
+                               
+                            />
+                        </Tooltip>
                     </li>
                 </ul>
                     
