@@ -1,6 +1,6 @@
-import {useState} from 'react';
+
 import styles from '../styles/nav.module.css';
-import {Container, Row, Switch, Tooltip} from '@nextui-org/react';
+import {Container, Row, Switch, Tooltip, Text, useTheme} from '@nextui-org/react';
 import Link from "next/link"
 import { BsGithub, BsFacebook } from 'react-icons/bs';
 import { IoMdContact } from 'react-icons/io';
@@ -8,18 +8,22 @@ import { AiFillLinkedin } from 'react-icons/ai';
 import { FaMoon } from 'react-icons/fa';
 import {BsFillSunFill} from 'react-icons/bs';
 
-const Nav = () => {
-    const [isDark, setIsDark] = useState(false);
-    
-    const handleDarkMood = () => {
-        if(isDark===false){
-            setIsDark(true);
-        } else {
-            setIsDark(false);
-        }
-    }
+const Nav = ({handleChange, type}) => {
+    const { theme } = useTheme();
+    // console.log(type)
+    // console.log(theme);
     return (
-        <nav className={styles.nav}>
+        <Text 
+            css={{
+                backgroundColor: "hsla(0,0%,100%,0.8)",
+                shadow:"0px 5px 20px -5px rgb(2 1 1 / 10%)",
+                position:"fixed",
+                top:"0",
+                width:"100%",
+                zIndex:"111111",
+                backdropFilter:"saturate(180%) blur(10px)"
+            }} 
+        >
             <Container>
                 
                 <div className={styles.ul}>
@@ -68,14 +72,13 @@ const Nav = () => {
                         className={[styles.navItem, styles.navItemLinkdin].join(" ")}>
                         <Tooltip
                             color="primary"
-                            content={isDark ? "Dark" : "Normal"}
                             placement="bottom"
                         >
                             <Switch
                                 iconOn={<FaMoon/>}
                                 iconOff={<BsFillSunFill/>}
-                                onChange={handleDarkMood}
-                               
+                                onChange={handleChange}
+                                shadow
                             />
                         </Tooltip>
                     </li>
@@ -83,7 +86,7 @@ const Nav = () => {
                     
                 </div>
             </Container>
-        </nav>
+        </Text>
     );
 };
 
