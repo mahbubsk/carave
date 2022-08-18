@@ -15,8 +15,8 @@ const Nav = ({handleChange, type}) => {
     return (
         <Text 
             css={{
-                backgroundColor: theme.colors.navColor,
-                shadow:theme.shadows.navShadow,
+                backgroundColor: "hsla(0,0%,100%,0.8)",
+                shadow:"0px 5px 20px -5px rgb(2 1 1 / 10%)",
                 position:"fixed",
                 top:"0",
                 width:"100%",
